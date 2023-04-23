@@ -6,4 +6,10 @@ class lista():
         self.size=0
     def empty(self):
         return self.primer==None
-    
+    def insertprimero(self, dato):
+        n = nodo()
+        if self.empty():
+            self.primer=self.ultimo=n
+        else:
+            n.siguiente = self.primer
+            self.primer = n
