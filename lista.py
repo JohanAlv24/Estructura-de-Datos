@@ -1,3 +1,4 @@
+from Nodos import nodo
 class lista():
     def __init__(self):
         self.primer=None
