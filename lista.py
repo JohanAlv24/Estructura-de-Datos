@@ -13,3 +13,9 @@ class lista():
         else:
             n.siguiente = self.primer
             self.primer = n
+    def show(self):
+        aux=self.primer
+        while aux!=None:
+            print(aux.dato, end=" ")
+            aux=aux.siguiente
+        
