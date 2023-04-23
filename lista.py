@@ -13,3 +13,11 @@ class lista():
         else:
             n.siguiente = self.primer
             self.primer = n
+    def srec(self, n):
+        aux = n
+        if aux!=None:
+            print(aux.dato, end=" ")
+            self.srec(aux.siguiente)
+    def show(self):
+        self.srec(self.primer)
+    
