@@ -6,3 +6,10 @@ class pila():
         self.size=0
     def empty(self):
         return self.primer==None
+    def apilar(self, dato):
+        n = nodo(dato)
+        if self.empty:
+            self.primer=self.ultimo=n
+        else:
+            self.ultimo.siguiente = n
+            self.ultimo = n
