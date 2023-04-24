@@ -6,7 +6,7 @@ class pila():
         self.size=0
     def empty(self):
         return self.primer==None
-    def apilar(self, dato):
+    def add(self, dato):
         n = nodo(dato)
         if self.empty:
             self.primer=self.ultimo=n
