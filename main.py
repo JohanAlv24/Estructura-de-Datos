@@ -1,10 +1,17 @@
+from cola import cola
 from pila import pila
-p = pila()
-p.add(3)
-p.add(5)
-p.add(7)
-p.pop()
-p.pop()
-p.add(6)
-p.add(9)
-p.show()
+grafo = {
+    1: [2, 3, 5],
+    2: [1, 4],
+    3: [1, 6],
+    4: [2, 7, 8],
+    5: [1, 6],
+    6: [5, 3],
+    7: [4, 8, 12],
+    8: [4, 7, 11, 10],
+    9: [10, 11],
+    10: [9, 8],
+    11: [8, 9, 12],
+    12: [7, 11]
+}
+print(grafo[3])
