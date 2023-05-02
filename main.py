@@ -1,2 +1,10 @@
-from lista import lista
-print("Main de prueba")
+from pila import pila
+p = pila()
+p.add(3)
+p.add(5)
+p.add(7)
+p.pop()
+p.pop()
+p.add(6)
+p.add(9)
+p.show()
