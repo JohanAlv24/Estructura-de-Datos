@@ -1,17 +1,33 @@
-from cola import cola
-from pila import pila
+from ABC import ABC
 grafo = {
-    1: [2, 3, 5],
-    2: [1, 4],
-    3: [1, 6],
-    4: [2, 7, 8],
-    5: [1, 6],
-    6: [5, 3],
-    7: [4, 8, 12],
-    8: [4, 7, 11, 10],
-    9: [10, 11],
-    10: [9, 8],
-    11: [8, 9, 12],
-    12: [7, 11]
+    'Argentina': ['Bolivia', 'Brasil', 'Chile', 'Paraguay', 'Uruguay'],
+    'Bolivia': ['Argentina', 'Brasil', 'Chile', 'Paraguay', 'Perú'],
+    'Brasil': ['Argentina', 'Bolivia', 'Colombia', 'Guyana', 'Paraguay', 'Perú', 'Surinam', 'Uruguay', 'Venezuela'],
+    'Colombia': ['Venezuela', 'Ecuador', 'Panamá', 'Brasil', 'Perú'],
+    'Chile': ['Argentina', 'Bolivia', 'Perú'],
+    'Ecuador': ['Colombia', 'Perú'],
+    'Guyana': ['Surinam', 'Venezuela', 'Brasil'],
+    'Paraguay': ['Argentina', 'Bolivia', 'Brasil'],
+    'Perú': ['Bolivia', 'Brasil', 'Chile', 'Colombia', 'Ecuador'],
+    'Surinam': ['Brasil', 'Guyana'],
+    'Uruguay': ['Argentina', 'Brasil'],
+    'Venezuela': ['Brasil', 'Colombia', 'Guyana']
+
 }
-print(grafo[3])
+ABC = ABC(grafo, "Guyana", "Chile")
+print(ABC.DFS())
+
+
+'''
+geographic_graph = {
+    'Lima': {'Santiago': 2496, 'Buenos Aires': 3909, 'Bogotá': 1554},
+    'Santiago': {'Lima': 2496, 'Buenos Aires': 1400},
+    'Buenos Aires': {'Lima': 3909, 'Santiago': 1400, 'São Paulo': 2063},
+    'Bogotá': {'Lima': 1554, 'Quito': 976, 'Caracas': 1069},
+    'Quito': {'Bogotá': 976, 'Lima': 1318},
+    'Caracas': {'Bogotá': 1069, 'Buenos Aires': 3923},
+    'São Paulo': {'Buenos Aires': 2063, 'Rio de Janeiro': 357},
+    'Rio de Janeiro': {'São Paulo': 357}
+}
+
+'''

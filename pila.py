@@ -18,15 +18,18 @@ class pila():
             self.ultimo = n
     def pop(self):
         if self.empty():
-            print("No es posible eliminar de una pila vacía")
+            a = "Pila vacía"
         elif self.primer==self.ultimo:
+            a = self.primer.dato
             self.primer=self.ultimo=None
         else:
+            a = self.ultimo.dato
             aux = self.primer
             while aux.siguiente!=self.ultimo:
                 aux=aux.siguiente
             self.ultimo = aux
             self.ultimo.siguiente = None
+        return a
     def show(self):
         aux = self.primer
         while aux!=None:

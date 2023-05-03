@@ -18,11 +18,14 @@ class cola():
             self.ultimo = n
     def pop(self):
         if self.empty():
-            print("No es posible eliminar de una cola vacía")
+            a="Cola vacía"
         elif self.primer==self.ultimo:
+            a = self.primer.dato
             self.primer=self.ultimo=None
         else:
+            a = self.primer.dato
             self.primer = self.primer.siguiente   
+        return a
     def show(self):
         aux = self.primer
         while aux!=None:
