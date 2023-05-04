@@ -24,12 +24,12 @@ class DFS():
                     break
         return val
     def trayec(self, n):
-        t = "{}".format(n[0])+" "
+        t = str(n[0])+" "
         x = n[1]
         while x!=self.expandidos[x]:
-            t+="{}".format(x)+" "
+            t+=str(x)+" "
             x = self.expandidos[x]
-        t+="{}".format(x)
+        t+=str(x)
         return self.reverse(t)
     def reverse(self, s):
         s = s.split(' ')

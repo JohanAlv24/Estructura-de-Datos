@@ -1,5 +1,6 @@
 from BFS import BFS
 from DFS import DFS
+from ID import ID
 grafo = {
     1: [2, 11],
     2 : [3, 12],
@@ -16,11 +17,11 @@ grafo = {
     13 : [12, 14],
     14 : [13, 6]
 }
-BFS = BFS(grafo, 1, 12)
-print(BFS.run()+"\n")
-#1 2 12
-DFS = DFS(grafo, 1, 12)
-print(DFS.run()+"\n")
-#1 11 10 9 8 7 6 14 13 12
+DFS = DFS(grafo, 1, 3)
+print(DFS.run())
+print()
+ID = ID(grafo, 1, 3, 2)
+print(ID.run())
+
 
 
