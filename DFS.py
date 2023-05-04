@@ -1,12 +1,12 @@
 from pila import pila
-class ABC():
+class DFS():
     def __init__(self, grafo, base, meta):
         self.base = base
         self.meta = meta
         self.grafo = grafo
         self.pila = pila()
         self.expandidos = dict()
-    def DFS(self):
+    def run(self):
         self.pila.add((self.base, self.base))
         val = False
         while val==False:
@@ -37,3 +37,4 @@ class ABC():
         for i in range(len(s)-1, -1, -1):
             x+=s[i]+" "
         return x
+    
