@@ -1,3 +1,5 @@
+import sys
+sys.path.append('Estructuras')
 from pila import pila
 class DFS():
     def __init__(self, grafo, base, meta):
@@ -7,11 +9,14 @@ class DFS():
         self.pila = pila()
         self.expandidos = dict()
     def run(self):
-        self.pila.add((self.base, self.base))
-        val = False
-        while val==False:
-            val = self.expand()
-        return self.trayec(self.pila.ultimo.dato)
+        if self.base==self.meta:
+            return self.base
+        else:
+            self.pila.add((self.base, self.base))
+            val = False
+            while val==False:
+                val = self.expand()
+            return self.trayec(self.pila.ultimo.dato)
     def expand(self):
         val = False
         n = self.pila.pop()
@@ -35,6 +40,8 @@ class DFS():
         s = s.split('-')
         x=''
         for i in range(len(s)-1, -1, -1):
-            x+=s[i]+" "
+            if i==0:
+                x+=s[i]
+            else:
+                x+=s[i]+"-"
         return x
-    
